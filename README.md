@@ -117,6 +117,78 @@ def reset(self):
 
 ## how does a user interact with this app?
 
+A user can see and update the itemlists for each account. 
+
+### updating the item lists
+To update the itemlists the user can issue a text command such as "<name of account in account_map> <item name> <quantity>" bought'
+for example, there is an item called AGS and lets say the user bought 8 of them on an account the user named "R". 
+to update that accounts item list, the user types in "R AGS 8" and bam, the list is updated.
+
+The user can also update the item list using speech to text by issuing a command like "<account name as defined in account_map> SPEECH" followed by saying outloud what the items were (all the items are initials so you would pronounce AGS not as each individual letter- i set it up this way as there is very little ambiguity and the text to speech analyzer rarely messed up with initials). So, for example this would be the command for an account called R. "R SPEECH" and followed by saying the item intials outloud.
+        
+ Both methods of updating rely on a method in Item called update.
+ ```
+ def update(self,name,quantity="NA"):
+        """
+        updates an item in the item list so its quantity and status reflects the user's input
+
+        Parameters:
+        name:the name of the item as given in the dictionary that was used to inialize the list.
+        quantity: the amount of items the user inputs. This refers to the amount of that item
+                  the account has purchased.
+        """
+        for item in self.itemlist:
+            if item.name == name:
+                item.done = "Y"
+                if item.quantity == 0:
+                    item.time = time.localtime()
+                item.quantity = item.quantity + int(quantity)
+```
+update changes the appropriate fields of the Item in the itemlist of the appropriate account specified.
+
+
+### displaying the itemlists
+
+The item list can be displayed in two ways.
+
+One, is just issuing the command "<account name as defined in account_map> DISPLAY"
+so, something like "R DISPLAY".
+        
+The other way to "display" is text to speech by issuing the command "<account name as defined in account_map> READ"
+So, something like "R READ". This results in the items that you haven't currently done for the specefied account bieng read
+out loud by your computer.
+        
+        
+## Quick overview of running and configuring the app.
+
+adding your custom list of items:Go to staticvars.py and you will find a map of item intials and their buy limit. Update this however you want.The item initials in this map is how you will refer to the items when you update items.
+
+In main.py you can initialize an account with that itemlist by doing Account(name of the map in staticvars.py).
+then you can give it a nickname that you can refer to it by in your commands by mapping the nickname to the account in account_map. EX:
+```
+account_map = {'R':Account(rich),'M':Account(rich),'P':Account(poor)}
+```
+rich and poor refer to the maps in staticvars.py that you want to have as the itemlists for those accounts.
+
+After you have configured your itemlist and account_map you can run the app by navigating to the directory which contains main.py and typing "python main.py" in the terminal. This will start the main loop and you will be asked for input.
+
+(assuming you have named your account 'R' in the variable account_map).
+COMMANDS:
+To DISPLAY:
+R DISPLAY.  This displays colorful text to the console.
+R READ. This causes your computer to read out the items you haven't done for account 'R'.
+
+To UPDATE:
+R item-name quantity. EX: R AGS 5. This updates the itemlist of account 'R' to reflect you bought 5 AGSs.
+R SPEECH. This will stall and allow you to say out loud the items you have purchased.
+
+
+
+
+
+
+
+
 
 
 
