@@ -1,6 +1,6 @@
 x = 5
 
 def gooby():
-    x = 10
+    return x
 
-print(x)
+print(gooby())
