@@ -1,6 +1,12 @@
 # Runescape-investment-tracker
 A tool that offers functionality to help with runescape in-game investing through text and speech-to-text based updates to items.
 
+# Navigation
+
+- [interacting with the app](#how-does-a-user-interact-with-this-app?)
+
+
+
 ## Why does it exist?
 
 Runescape is a game with a complex and player driven economy. The main way people trade with others is through an in-game feature
