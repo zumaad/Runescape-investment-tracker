@@ -3,7 +3,7 @@ A tool that offers functionality to help with runescape in-game investing throug
 
 # Navigation
 
-- [interacting with the app](#how-does-a-user-interact-with-this-app?)
+- [interacting with the app](#how-does-a-user-interact-with-this-app-?)
 
 
 
