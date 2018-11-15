@@ -1,3 +1,7 @@
+"""
+The file that runs the application. It has a while loop that runs infinitely and queries
+the user for input and updates the models accordingly.
+"""
 import time
 from colorama import Fore, Back, Style
 import speech_recognition as sr
@@ -17,6 +21,11 @@ pooracc = Account(poor)
 
 # utility function to return an account.
 def returnacc(name):
+    """
+    This is a utlity function to return an account based on the letter you pass it.
+    the letter is also what a user inputs when performing any update on an account.
+    """
+
     if name == "R":
         return richacc
     elif name == "M":
@@ -27,6 +36,10 @@ def returnacc(name):
 
 
 def main():
+    """
+    Main function that asks the user for input and takes the input and gives it to
+    the correct methods to update the account's item lists along with displaying the lists.
+    """
     
     while True:
         items = input("update items,display items,read, or go back ")
@@ -62,7 +75,7 @@ def main():
                 elif len(iandq) == 3:
                     returnacc(iandq[0]).refresh()
                     returnacc(iandq[0]).update(iandq[1],iandq[2])
-                    
+
                 else: 
                     main()
             else:
