@@ -5,7 +5,7 @@ A tool that offers functionality to help with runescape in-game investing throug
 
 - [interacting with the app](#interacting-with-the-app)
 - [configuring and running the app](#overview-of-configuring-and-running-the-app)
-- [video] (#video-of-it-working)
+- [video](#video-of-it-working)
 - [software](#software-needed)
 
 
