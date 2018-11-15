@@ -14,14 +14,8 @@ mic = sr.Microphone()
 engine = pyttsx3.init()
 engine.setProperty('rate',75)
 
-richacc= Account(rich)
-medacc = Account(rich)
-pooracc = Account(poor) 
 
-account_map = {'R':richacc,'M':medacc,'P':pooracc}
-
-
-# utility function to return an account.
+account_map = {'R':Account(rich),'M':Account(rich),'P':Account(poor)}
 
 
 def main():
@@ -43,7 +37,7 @@ def main():
                 if iandq[1] =="DISPLAY":
                     account_map[iandq[0]].refresh()
                     account_map[iandq[0]].display()
-
+                    
                 elif iandq[1] == "READ":
                     for item in account_map[iandq[0]].itemlist:
                         if item.done == "N":
