@@ -215,24 +215,6 @@ class Account:
                         item.reset()
 
 
-              
-
-            
-
-
-
-            
-
-    
-    
-
-
-    
-        
-
-        
-
-
 
 class Item:
     def __init__(self, name, limit,quantity = 0,done = "N",time = None):
@@ -261,51 +243,16 @@ def returnacc(name):
     elif name == "P":
         return pooracc
 
-def start():
-    first =input("what do you want to do ")
-    if first == "SHORTCUT":
-        shortcutz()
-    elif first == "SPEECH":
-        updatestate()
-    elif first == "read":
-        readstate()
-    else :
-        start()
 
-
-
-
-def updatestate():
-    account = input("which account do you want to update  ")
-    returnacc(account).refresh()
     
-    
-    with mic as source:
-        audio = r.listen(source,phrase_time_limit = None)
-    speech = r.recognize_google(audio)
-    upperspeech = [word.upper() for word in speech.split()]
-    returnacc(account).updatewithspeech(upperspeech)
-    print("these are the items you updated ")
-    print(upperspeech)
-    done = input("are you done updating items?  ")
-    if done == "yes":
-        start()
-    elif done == "no":
-        updatestate()
-    
-def shortcutz():
+def main():
     while True:
         items = input("update items,display items,read, or go back ")
         iandq = items.split()
         
         if len(iandq) < 2:
-            if iandq[0] == "HOME":
-                shortcutz()
-
-            else:
-                shortcutz()
+            main()
                 
-
         else:
             if iandq[0] == "R" or iandq[0] == "M" or iandq[0] == "P" :
 
@@ -335,57 +282,23 @@ def shortcutz():
                     
 
 
-
                 elif len(iandq) == 3:
                     returnacc(iandq[0]).refresh()
                     returnacc(iandq[0]).update(iandq[1],iandq[2])
 
                 else: 
-                    shortcutz()
+                    main()
             else:
-                shortcutz()
+                main()
         
-
-
-
-
-
-
-            
-         
-
-
-
-
-
-    
-
-# def readstate():
-#     account = input("which account do you want to read from  ")
-#     if account == "rich" or account =="poor" or  account =="medium":
-#         returnacc(account).refresh()
-    
-#     else:
-#         readstate()
-#     for item in returnacc(account).itemlist:
-#         if item.done == "N":
-#             engine.say(item.name)
-
-#     returnacc(account).display()    
-#     engine.runAndWait()
-    
-#     question = input("are you done  ")
-#     if question == "yes":
-#         start()
-#     else:
-#         readstate()
-
-
 richacc= Account(rich)
 medacc = Account(rich)
 pooracc = Account(poor)
 
-start()
+    
+main()
+
+
 
    
 
