@@ -1,6 +1,6 @@
 """
-The models of the application. This is how the app stores data through the methods avaiable in these 
-classes, it updates the data.
+The models of the application. This is how the app stores data. Through the methods available in these 
+classes, data is updated.
 """
 import time
 from colorama import Fore, Back, Style
