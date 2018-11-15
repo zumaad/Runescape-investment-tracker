@@ -82,6 +82,8 @@ class Account:
                     + "  buy limit restarts at: " + str(buylimitrefresh))
             else:
                 print(green + item.name + "--------" + str(item.quantity) + '/' + str(item.limit))
+            
+        print("DISPLAY OVER----------------------------------------------------\n")
 
 
     

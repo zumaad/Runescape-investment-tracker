@@ -18,21 +18,10 @@ richacc= Account(rich)
 medacc = Account(rich)
 pooracc = Account(poor) 
 
+account_map = {'R':richacc,'M':medacc,'P':pooracc}
+
 
 # utility function to return an account.
-def returnacc(name):
-    """
-    This is a utlity function to return an account based on the letter you pass it.
-    the letter is also what a user inputs when performing any update on an account.
-    """
-
-    if name == "R":
-        return richacc
-    elif name == "M":
-        return medacc
-    elif name == "P":
-        return pooracc
-
 
 
 def main():
@@ -49,14 +38,14 @@ def main():
             main()
                 
         else:
-            if iandq[0] == "R" or iandq[0] == "M" or iandq[0] == "P" :
+            if iandq[0] in account_map:
 
                 if iandq[1] =="DISPLAY":
-                    returnacc(iandq[0]).refresh()
-                    returnacc(iandq[0]).display()
+                    account_map[iandq[0]].refresh()
+                    account_map[iandq[0]].display()
 
                 elif iandq[1] == "READ":
-                    for item in returnacc(iandq[0]).itemlist:
+                    for item in account_map[iandq[0]].itemlist:
                         if item.done == "N":
                             engine.say(item.name)
                             
@@ -68,13 +57,13 @@ def main():
                         audio = r.listen(source,phrase_time_limit = None)
                     speech = r.recognize_google(audio)
                     upperspeech = [word.upper() for word in speech.split()]
-                    returnacc(iandq[0]).updatewithspeech(upperspeech)
+                    account_map[iandq[0]].updatewithspeech(upperspeech)
                     print("these are the items you updated ")
                     print(upperspeech)
                     
                 elif len(iandq) == 3:
-                    returnacc(iandq[0]).refresh()
-                    returnacc(iandq[0]).update(iandq[1],iandq[2])
+                    account_map[iandq[0]].refresh()
+                    account_map[iandq[0]].update(iandq[1],iandq[2])
 
                 else: 
                     main()
