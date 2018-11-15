@@ -3,7 +3,7 @@ A tool that offers functionality to help with runescape in-game investing throug
 
 # Navigation
 
-- [interacting with the app](#how-does-a-user-interact-with-this-app-?)
+- [interacting with the app](#how-does-a-user-interact-with-this-app)
 
 
 
@@ -121,7 +121,7 @@ def reset(self):
 
 (8) is taken care of by the ability to create multiple accounts with different item lists.
 
-## how does a user interact with this app?
+## how does a user interact with this app
 
 A user can see and update the itemlists for each account. 
 
