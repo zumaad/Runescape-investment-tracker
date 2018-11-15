@@ -160,6 +160,11 @@ out loud by your computer.
         
         
 This is what the display looks like:
+![picture of display](display.png)
+
+items in green text haven't been purchased yet.
+items in red text mean that you have purchased 50% or more of the buy limit
+items in magenta mean that you have purchased the item but purchased less than 50% of the buy limit.
 
         
         
