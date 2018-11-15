@@ -159,6 +159,10 @@ So, something like "R READ". This results in the items that you haven't currentl
 out loud by your computer.
         
         
+This is what the display looks like:
+
+        
+        
 ## Quick overview of running and configuring the app.
 
 adding your custom list of items:Go to staticvars.py and you will find a map of item intials and their buy limit. Update this however you want.The item initials in this map is how you will refer to the items when you update items.
@@ -181,6 +185,10 @@ R READ. This causes your computer to read out the items you haven't done for acc
 To UPDATE:
 R item-name quantity. EX: R AGS 5. This updates the itemlist of account 'R' to reflect you bought 5 AGSs.
 R SPEECH. This will stall and allow you to say out loud the items you have purchased.
+
+
+
+
 
 
 
