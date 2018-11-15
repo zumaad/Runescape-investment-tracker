@@ -207,9 +207,18 @@ R SPEECH. This will stall and allow you to say out loud the items you have purch
 
 ## Video of it working
 
+https://youtu.be/o6N8kkfULcQ
+
+Speech to text at 1:09
+text to speech at 2:39
+
 
 ## software needed.
+- colorama. Used for fancy colors in terminal
+- pyttsx. Used for text to speech
+- SpeechRecogniton. Used for speech to text.
 
+All the modules above can be installed by pip.
 
 
 
