@@ -196,7 +196,10 @@ R SPEECH. This will stall and allow you to say out loud the items you have purch
 
 
 
+## Video of it working
 
+
+## software needed.
 
 
 
