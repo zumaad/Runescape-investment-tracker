@@ -3,7 +3,10 @@ A tool that offers functionality to help with runescape in-game investing throug
 
 # Navigation
 
-- [interacting with the app](#how-does-a-user-interact-with-this-app)
+- [interacting with the app](#interacting-with-the-app)
+- [configuring and running the app](#overview-of-configuring-and-running-the-app)
+- [video] (#video-of-it-working)
+- [software](#software-needed)
 
 
 
@@ -121,7 +124,7 @@ def reset(self):
 
 (8) is taken care of by the ability to create multiple accounts with different item lists.
 
-## how does a user interact with this app
+## interacting with the app
 
 A user can see and update the itemlists for each account. 
 
@@ -175,7 +178,7 @@ This is what the display looks like:
 The tiem you first bought it is displayed along with the current time and the time that items buy limit refreshes so that you can buy the full quantity again.
         
         
-## Quick overview of running and configuring the app.
+## overview of running and configuring the app.
 
 adding your custom list of items:Go to staticvars.py and you will find a map of item intials and their buy limit. Update this however you want.The item initials in this map is how you will refer to the items when you update items.
 
