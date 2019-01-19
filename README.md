@@ -2,12 +2,18 @@
 A tool that offers functionality to help with runescape in-game investing through text and speech-to-text based updates to items.
 
 # Navigation
-
+- [Demo](#video-of-it-working)
 - [interacting with the app](#interacting-with-the-app)
 - [configuring and running the app](#overview-of-configuring-and-running-the-app)
-- [video](#video-of-it-working)
 - [software](#software-needed)
 
+
+## Video of it working
+
+https://youtu.be/o6N8kkfULcQ
+
+Speech to text at 1:09
+text to speech at 2:39
 
 
 ## Why does it exist?
@@ -202,17 +208,6 @@ R READ. This causes your computer to read out the items you haven't done for acc
 To UPDATE:
 R item-name quantity. EX: R AGS 5. This updates the itemlist of account 'R' to reflect you bought 5 AGSs.
 R SPEECH. This will stall and allow you to say out loud the items you have purchased.
-
-
-
-
-
-## Video of it working
-
-https://youtu.be/o6N8kkfULcQ
-
-Speech to text at 1:09
-text to speech at 2:39
 
 
 ## software needed.
