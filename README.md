@@ -12,6 +12,8 @@ A tool that offers functionality to help with runescape in-game investing throug
 
 ## Why does it exist?
 
+### Buying from impatient sellers and selling to impatient buyers
+
 Runescape is a game with a complex and player driven economy. The main way people trade with others is through an in-game feature
 called the Grand Exchange (abbreviated to GE). The GE allows players to buy and sell items for the price they set and the only way these
 offers complete(the item gets sold or bought) is when other players put compatible offers(compatible doesn't mean exactly the same price).
