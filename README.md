@@ -1,6 +1,5 @@
 # Runescape-investment-tracker
-A tool that offers functionality to help with runescape in-game investing through text and speech-to-text based updates to items.
-
+A tool that offers functionality to help with arbitrage on virtual commodity markets.
 # Navigation
 - [Demo](#video-of-it-working)
 - [interacting with the app](#interacting-with-the-app)
