@@ -187,10 +187,10 @@ The time you first bought it is displayed along with the current time and the ti
         
 ## overview of running and configuring the app.
 
-adding your custom list of items:Go to staticvars.py and you will find a map of item intials and their buy limit. Update this however you want.The item initials in this map is how you will refer to the items when you update items.
+adding your custom list of items: Go to staticvars.py and you will find a map of item initials and their buy limit. Update this however you want. The item initials in this map is how you will refer to the items when you update items.
 
 In main.py you can initialize an account with that itemlist by doing Account(name of the map in staticvars.py).
-then you can give it a nickname that you can refer to it by in your commands by mapping the nickname to the account in account_map. EX:
+Then, you can give it a nickname that you can refer to it by in your commands by mapping the nickname to the account in account_map. EX:
 ```
 account_map = {'R':Account(rich),'M':Account(rich),'P':Account(poor)}
 ```
