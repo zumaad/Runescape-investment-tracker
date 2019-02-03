@@ -182,7 +182,7 @@ This is what the display looks like:
 - items in red text mean that you have purchased 50% or more of the buy limit
 - items in magenta mean that you have purchased the item but purchased less than 50% of the buy limit.
 
-The tiem you first bought it is displayed along with the current time and the time that items buy limit refreshes so that you can buy the full quantity again.
+The time you first bought it is displayed along with the current time and the time that item's buy limit refreshes so that you can buy the full quantity again.
         
         
 ## overview of running and configuring the app.
